@@ -65,7 +65,7 @@ empTable.addEventListener('click', (e) => {
         if (confirm('Are you sure you want to delete this employee?')) {
             let rowIndex = e.target.parentElement.parentElement.rowIndex;
              // REMOVE EMPLOYEE FROM ARRAY
-            employees.splice(rowIndex - 1, 1);
+            employees.splice(rowIndex, 1);
             // BUILD THE GRID
             buildGrid();
         }
