@@ -75,10 +75,9 @@ empTable.addEventListener('click', (e) => {
 
 // BUILD THE EMPLOYEES GRID
 function buildGrid() {
+    let tbody = empTable.querySelector('tbody');
     // REMOVE THE EXISTING SET OF ROWS BY REMOVING THE ENTIRE TBODY SECTION
-    empTable.innerHTML = '';
-    // REBUILD THE TBODY FROM SCRATCH
-    let tbody = document.createElement('tbody');
+    tbody.innerHTML = '';
     // LOOP THROUGH THE ARRAY OF EMPLOYEES
     employees.forEach((employee) => {
         // REBUILDING THE ROW STRUCTURE
