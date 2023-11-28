@@ -1,10 +1,10 @@
 // // // CREATE AN ARRAY OF EMPLOYEES
 let employees = [
-    { id: 54345677, name: 'John Doe', ext: 1234, email: 'john.doe@gmail.com', department: 'Administrative' },
-    { id: 54345688, name: 'Hitesh Patel', ext: 5678, email: 'hitesh.patel@gmail.com', department: 'Engineering' },
-    { id: 54345644, name: 'Gina Lisi', ext: 3378, email: 'gina.lisi@gmail.com', department: 'Executive' },
-    { id: 54345633, name: 'Alex Shaw', ext: 6678, email: 'alex.shaw@gmail.com', department: 'Marketing' },
-    { id: 54345699, name: 'Gary Melony', ext: 8878, email: 'gary.melony@gmail.com', department: 'QA' }
+    { id: 54345677, name: 'John Doe', extension: 1234, email: 'john.doe@gmail.com', department: 'Administrative' },
+    { id: 54345688, name: 'Hitesh Patel', extension: 5678, email: 'hitesh.patel@gmail.com', department: 'Engineering' },
+    { id: 54345644, name: 'Gina Lisi', extension: 3378, email: 'gina.lisi@gmail.com', department: 'Executive' },
+    { id: 54345633, name: 'Alex Shaw', extension: 6678, email: 'alex.shaw@gmail.com', department: 'Marketing' },
+    { id: 54345699, name: 'Gary Melony', extension: 8878, email: 'gary.melony@gmail.com', department: 'QA' }
 ];
 
 // // // CHECK TO SEE IF STORAGE OBJECT EXISTS WHEN THE PAGE LOADS
@@ -65,7 +65,7 @@ empTable.addEventListener('click', (e) => {
         if (confirm('Are you sure you want to delete this employee?')) {
             let rowIndex = e.target.parentElement.parentElement.rowIndex;
              // REMOVE EMPLOYEE FROM ARRAY
-            employees.splice(rowIndex, 1);
+            employees.splice(rowIndex -1, 1);
             // BUILD THE GRID
             buildGrid();
         }
